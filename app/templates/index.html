@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Ahorrando</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images2/favicon-32x32.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+
+
+<body>
+
+
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <h2 class="nav__tittle">App Ahorrando</h2>
+            </div>
+
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                    <a href="{{ url_for('index') }}" class="nav__links">Inicio</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#about" class="nav__links">Acerca de</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#price" class="nav__links">Planes</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#testimony" class="nav__links">Blog</a>
+                </li>
+
+                <img src="{{ url_for('static', filename='images/close.svg') }}" alt="" class="nav__close">
+            </ul>
+
+            <div class="nav__menu">
+                <img src="{{ url_for('static', filename='images/menu.svg') }}" alt="" class="nav__img">
+            </div>
+        </nav>
+
+        <section class="hero__container container">
+            <h1 class="hero__tittle">Aprende a gastar en lo que te gusta, sin quedarte sin dinero</h1>
+            <p class="hero__paragraph">Esta es mi propuesta a una aplicación web con la que se puede hacer conciencia más fácil del dinero perosnal. La idea es hacer tres planes, uno gratis, donde maneje consejos sencillos, uno de mensualidad, con el precio suficiente para poder pagar las licencias de la inteligencia artificial. Y uno perosnalizado bajo cotización donde ya se pondrían en contacto con personas para un plan más detallado.</p>
+            <a href="{{ url_for('login') }}" class="cta">Comenzar ahora</a>
+        </section>
+    </header>
+
+    <main>
+        <section class="container about" id="about">
+            <h2 class="subtitle">¿Cómo funciona la aplicación?</h2>
+            <p class="about__paragraph">¡Ahorrar nunca fue tan fácil!</p>
+            <div class="about__main">
+                <article class="about__icons">
+                    <img src="{{ url_for('static', filename='images2/money.svg') }}" alt="" class="about__icon">
+                    <h3 class="about__tittle">Cantidad a administrar</h3>
+                    <p class="about__paragraph">Para empezar, configura la cantidad de dinero que quieras administrar</p>
+                </article>
+
+                <article class="about__icons">
+                    <img src="{{ url_for('static', filename='images2/cloud.svg')}}" alt="" class="about__icon">
+                    <h3 class="about__tittle">Todo desde la aplicación</h3>
+                    <p class="about__paragraph">Cuando creas una cuenta, tus datos se guardaran en una base de datos SQL</p>
+                </article>
+                <article class="about__icons">
+                    <img src="{{ url_for('static', filename='images2/candles.svg')}}" alt="" class="about__icon">
+                    <h3 class="about__tittle">Estadísticas</h3>
+                    <p class="about__paragraph">Podrás visualizar a lo largo del tiempo tus patrones de compra e historial para poder tomar mejores desiciones.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="knowledge" id="knowledge">
+            <div class="knowledge__container container">
+                <div class="knowlegde__text">
+                    <h2 class="subtitle">¡Deja de perder dinero de una vez por todas!</h2>
+                    <p class="knowledge__paragraph">Descubre el camino hacia la libertad financiera con nuestra plataforma de control de gastos y ahorro 🚀💰</p>
+                    <a href="{{ url_for('login') }}" class="cta">Entra a la plataforma</a>
+                </div>
+
+                <figure class="knowledge__picture">
+                    <img src="/app/static/images2/carlos-muza-hpjSkU2UYSU-unsplash.jpg" alt="" class="knowledge_img">
+                </figure>
+            </div>
+        </section>
+
+        <section class="price container" id="price">
+            <h2 class="subtitle">Elige tu plan de preferencia</h2>
+
+
+            <div class="price__table">
+                <div class="price__element">
+                    <p class="price__name">Gastos menores</p>
+                    <h3 class="price__price">Free</h3>
+
+                    <div class="price__items">
+                        <p class="price__features">Frituras</p>
+                        <p class="price__features">Golocinas</p>
+                        <p class="price__features">Comidas</p>
+                    </div>
+
+                    <a href="{{ url_for('login') }}" class="price__cta">Empieza ahora</a>
+                </div>
+
+
+                <div class="price__element price__element--best">
+                    <p class="price__name">Agente Inteligente</p>
+                    <h3 class="price__price">$60/mes</h3>
+
+                    <div class="price__items">
+                        <p class="price__features">Compras de ropa </p>
+                        <p class="price__features">Compras de supermercado</p>
+                        <p class="price__features">Compras de aparatos electrónicos</p>
+                    </div>
+
+                    <a href="{{ url_for('login') }}" class="price__cta">Empieza ahora</a>
+                </div>
+
+
+                <div class="price__element">
+                    <p class="price__name">Asesoramiento personal</p>
+                    <h3 class="price__price">Desde $100</h3>
+
+                    <div class="price__items">
+                        <p class="price__features">Teléfonos</p>
+                        <p class="price__features">Regalos importantes</p>
+                        <p class="price__features">Carros</p>
+                    </div>
+
+                    <a href="{{ url_for('login') }}" class="price__cta">Empieza ahora</a>
+                </div>
+
+
+            </div>
+        </section>
+
+        <section class="testimony" id="testimony">
+            <div class="testimony__container container">
+
+                <img src="/app/static/images/leftarrow.svg" alt="" class="testimony__arrow" id="before">
+
+                <section class="testimony__body testimony__body--show" data-id="1">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle">Mi nombre es Jorge Fidel, <span class="testimony__course">Usuario de la App Ahorro</span></h2>
+                        <p class="testimony__review">La idea es poner aquí reseñas de usuarios satisfechos con el trabajo. Cuando esté hecho</p>
+                    </div>
+
+                    <figure class="testimony__picture">
+                        <img src="/app/static/images/face.jpg" alt="" class="testimony__img">
+                    </figure>
+                </section>
+
+                <section class="testimony__body" data-id="2">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle">Mi nombre es Alejandra Perez, <span class="testimony__course">Usuario de la App Ahorro</span></h2>
+                        <p class="testimony__review">La idea es poner aquí reseñas de usuarios satisfechos con el trabajo. Cuando esté hecho
+
+                    <figure class="testimony__picture">
+                        <img src="/app/static/images/face2.jpg" alt="" class="testimony__img">
+                    </figure>
+                </section>
+
+                <section class="testimony__body" data-id="3">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle">Mi nombre es Karen Arteaga, <span class="testimony__course">Usuario de la App Ahorro</span></h2>
+                        <p class="testimony__review">La idea es poner aquí reseñas de usuarios satisfechos con el trabajo. Cuando esté hecho</p>
+                    </div>
+
+                    <figure class="testimony__picture">
+                        <img src="/app/static/images/face3.jpg" alt="" class="testimony__img">
+                    </figure>
+                </section>
+                <img src="/app/static/images/rightarrow.svg" alt="" class="testimony__arrow" id="next">
+            </div>
+        </section>
+
+        <section class="questions container">
+            <h2 class="subtitle">Preguntas frecuentes</h2>
+            <p class="questions__paragraph">A continuación, nuestras preguntas más frecuentes.</p>
+
+            <section class="questions__container">
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">¿Cómo funcionaría la aplicación?
+                            <span class="questions__arrow">
+                                <img src="/app/static/images/arrow.svg" class="questions__img">
+                            </span>
+                        </h3>
+
+                        <p class="questions__show">La idea es que esta sea una aplicación mezclando la intenligencia artificial y las finanzas personales. Desarrollando un chatbot que pueda aconsejarte si puedes hacerte de un bien o no.</p>
+                    </div>
+                </article>
+
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">¿Con qué dinero trabajaría la aplicación?
+                            <span class="questions__arrow">
+                                <img src="/app/static/images/arrow.svg" class="questions__img">
+                            </span>
+                        </h3>
+
+                        <p class="questions__show"> La idea es hacer que la gente ingrese el monto que desea administrar y el periodo por el cuál desea que se administre. Puede ser desde su sueldo al mes, o una cantidad "x" por un tiempo que el usuario decida. Naturalmente estos intervalos de tiempo no son abiertos. Serán programados por defecto en la aplicación, por ejemplo: un mes, un semestre, un año, etc. Según lo más óptimo desde el punto de vista de finanzas personales. </p>
+                    </div>
+                </article>
+
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">¿De qué sirven las gráficas en la aplicación?
+                            <span class="questions__arrow">
+                                <img src="/app/static/images/arrow.svg" class="questions__img">
+                            </span>
+                        </h3>
+
+                        <p class="questions__show">La idea de las gráficas es mostrarle al usuario sus patrones de compra a lo largo del tiempo y que pueda visualizar, de manera más rápida y sencilla, sus conductas financieras. </p>
+                    </div>
+                </article>
+            </section>
+
+
+            <section class="questions__offer">
+                <h2 class="subtitle">¿Qué beneficios adicionales ofrece la aplicación para fomentar el ahorro?</h2>
+                <p class="questions__copy">Además de proporcionar un presupuesto claro, ofrecemos herramientas interactivas, consejos personalizados y desafíos para motivarte y ayudarte a alcanzar tus objetivos de ahorro de manera efectiva.</p>
+                <a href="{{ url_for('login') }}" class="cta">Aprende ahora</a>
+            </section>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <section class="footer__container container">
+            <nav class="nav nav--footer">
+                <h2 class="footer__title">Aplicación ahorro</h2>
+    
+                <ul class="nav__link nav__link--footer">
+                    <li class="nav__items">
+                        <a href="{{ url_for('index') }}" class="nav__links">Inicio</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#about" class="nav__links">Acerca de</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#price" class="nav__links">Planes</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#testimony" class="nav__links">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+    
+            <form class="footer__form">
+                <h2 class="footer__newsletter">Suscribete a la newsletter</h2>
+                <div class="footer__inputs">
+                    <input type="email" placeholder="Email:" class="footer__input" name="_replyto">
+                    <input type="submit" value="Registrate" class="footer__submit">
+                </div>
+            </form>
+        </section>
+    
+        <section class="footer__copy container">
+            <div class="footer__social">
+                <a href="#" class="footer__icons"><img src="{{ url_for('static', filename='images/facebook.svg') }}" class="footer__img"></a>
+                <a href="#" class="footer__icons"><img src="{{ url_for('static', filename='images/twitter.svg') }}" class="footer__img"></a>
+                <a href="#" class="footer__icons"><img src="{{ url_for('static', filename='images/youtube.svg')}}" class="footer__img"></a>
+            </div>
+    
+            <h3 class="footer__copyright">Derechos reservados &copy; Fidel Martíenz</h3>
+        </section>
+    </footer>
+
+
+    <script src="{{ url_for('static', filename='js/slider.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/questions.js')}}"></script>
+    
+
+</body>
+
+</html>

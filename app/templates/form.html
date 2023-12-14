@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}">
+  <title>Ingresar gastos</title>
+</head>
+<body>
+    <nav class="nav container1">
+        <div class="nav__logo">
+            <h2 class="nav__tittle">App Ahorrando</h2>
+        </div>
+        <ul class="nav__link nav__link--menu">
+            <li class="nav__items">
+                <a href="{{ url_for('index') }}" class="nav__links">Inicio</a>
+            </li>
+            <li class="nav__items">
+                <a href="{{ url_for('index') }}#about" class="nav__links">Acerca de</a>
+            </li>
+            <li class="nav__items">
+                <a href="{{ url_for('index') }}#price" class="nav__links">Planes</a>
+            </li>
+            <li class="nav__items">
+                <a href="{{ url_for('index') }}#testimony" class="nav__links">Blog</a>
+            </li>
+            
+    </nav>
+  <section class="form-register">
+    <h4>Ingresar gastos</h4>
+    <input class="controls" type="text" name="nombres" id="nombres" placeholder="Tipo de gasto">
+    <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Cantidad (MXN)">
+    <input class="botons" type="submit" value="Registrar">
+    <!-- <p><a href="#"></a></p> -->
+  </section>
+
+  <section class="form-exp">
+    <h4 class="exp_tittle">Explicación</h4>
+    <p class="exp_paragraph">La idea de esta aplicación es que en un chatbot parecido a la casilla que se muestra arriba, poder hacer un chat interactiva con principios de finanzas para que las personas puedan ahorar.
+
+        Por ejemplo, si una persona, ya configuró su información de "cuanto dinero quiere administrar al mes", con conocimientos financieros, hacer una respuesta interactiva y darle capacitación sobre si puede comprar algo o no. O sea si quiere comprar un teléfono nuevo, que la aplicación le pueda decir, con base en su estado financiero, si puede hacerlo o es mejor esperar a otro momento. 
+    </p>
+  </section>
+
+</body>
+</html>
